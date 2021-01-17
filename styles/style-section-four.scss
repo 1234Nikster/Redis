@@ -1,0 +1,1911 @@
+@keyframes bouncing {
+    0% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        bottom: 18px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0px;
+
+    &:active {
+        outline: none;
+        border: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.fourSlider {
+
+    .infoAboutPage {
+        position: absolute;
+        top: 50%;
+        right: -27px;
+        font-size: 18px;
+        transform: rotate(-90deg);
+        font-family: 'Proxima Nova';
+        font-weight: normal;
+        color: #d3d3d3;
+        pointer-events: none;
+    }
+
+    .containerSliceRedis.d {
+        display: none;
+    }
+
+    width: 100%;
+    flex-shrink: 0;
+    height: 100vh;
+
+    &__color {
+        position: relative;
+        border-right: 3px solid white;
+        border-left: 3px solid white;
+        box-sizing: border-box;
+        height: 100%;
+        z-index: 3;
+    }
+
+    &__containerBackground {
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        display: flex;
+    }
+
+    &__leftColor {
+        background-color: white;
+        width: 37%;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        padding-top: 185px;
+        padding-bottom: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .containerSliceRedis {
+            display: flex;
+            position: relative;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .sliceRedis {
+                max-width: 100%;
+                max-height: 100%;
+                display: table;
+                margin: 0 auto;
+                animation: moveRedis 1s linear 0s infinite alternate both, m 8s linear infinite;
+                position: relative;
+                z-index: 2;
+
+                @keyframes moveRedis {
+                    0% {
+                        transform: translateY(25px) scale(1);
+                        filter: drop-shadow(0 50 0px rgba(100, 0, 0, 0.5));
+                    }
+
+                    100% {
+                        transform: translateY(0px) scale(1.060);
+                        filter: drop-shadow(0px 0px 6px rgba(189, 79, 170, 0.767));
+                    }
+                }
+            }
+
+            .vitamineOne {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                // z-index: 1;
+                pointer-events: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 5%;
+                top: 10%;
+                transform: scale(0.8);
+                animation: toBig 6s 2s infinite linear, vitamineOne 6s 2s infinite ease-in-out;
+
+                &::before {
+                    content: 'Пищевые волокна';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: #676767;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: normal;
+                }
+
+                @keyframes toBig {
+                    25% {
+                        transform: scale(1.2);
+                    }
+
+                    50% {
+                        transform: scale(0.8);
+                    }
+
+                    75% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(0.8);
+                    }
+                }
+
+                @keyframes vitamineOne {
+
+                    0% {
+                        z-index: 4;
+                    }
+
+                    50% {
+                        left: 90%;
+                        top: 23%;
+                    }
+
+                    100% {
+                        left: 5%;
+                        top: 10%;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .vitamineTwo {
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 90%;
+                top: 30%;
+                transform: scale(0.8);
+                animation: toBig 9s infinite linear, vitamineTwo 9s infinite ease-in-out;
+
+                &::before {
+                    content: 'Вода';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: #676767;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: normal;
+                }
+
+                @keyframes toBig {
+                    25% {
+                        transform: scale(1.2);
+                    }
+
+                    50% {
+                        transform: scale(0.8);
+                    }
+
+                    75% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(0.8);
+                    }
+                }
+
+                @keyframes vitamineTwo {
+
+                    0% {
+                        z-index: 4;
+                    }
+
+                    50% {
+                        left: 0%;
+                        top: 40%;
+                    }
+
+                    100% {
+                        left: 90%;
+                        top: 30%;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .vitamineThree {
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 90%;
+                top: 70%;
+                transform: scale(0.8);
+                animation: toBig 6s 3.5s infinite linear, vitamineThree 6s 3.5s infinite ease-in-out;
+
+                &::before {
+                    content: 'Белки';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: #676767;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: normal;
+                }
+
+                @keyframes toBig {
+                    25% {
+                        transform: scale(1.2);
+                    }
+
+                    50% {
+                        transform: scale(0.8);
+                    }
+
+                    75% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(0.8);
+                    }
+                }
+
+                @keyframes vitamineThree {
+
+                    0% {
+                        z-index: 4;
+                    }
+
+                    50% {
+                        left: 1%;
+                        top: 15%;
+                    }
+
+                    100% {
+                        left: 90%;
+                        top: 70%;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .vitamineFour {
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 20%;
+                top: 80%;
+                transform: scale(0.8);
+                animation: toBig 7s 2.5s infinite linear, vitamineFour 7s 2.5s infinite ease-in-out;
+
+                &::before {
+                    content: 'Жиры';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: #676767;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: normal;
+                }
+
+                @keyframes toBig {
+                    25% {
+                        transform: scale(1.2);
+                    }
+
+                    50% {
+                        transform: scale(0.8);
+                    }
+
+                    75% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(0.8);
+                    }
+                }
+
+                @keyframes vitamineFour {
+
+                    0% {
+                        z-index: 4;
+                    }
+
+                    50% {
+                        left: 90%;
+                        top: 20%;
+                    }
+
+                    100% {
+                        left: 20%;
+                        top: 80%;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .vitamineFive {
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 10%;
+                top: 70%;
+                transform: scale(0.8);
+                animation: toBig 8s infinite linear, vitamineFive 8s infinite ease-in-out;
+
+                &::before {
+                    content: 'Углеводы';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -60%;
+                    color: #676767;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: normal;
+                }
+
+                @keyframes toBig {
+                    25% {
+                        transform: scale(1.2);
+                    }
+
+                    50% {
+                        transform: scale(0.8);
+                    }
+
+                    75% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(0.8);
+                    }
+                }
+
+                @keyframes vitamineFive {
+
+                    0% {
+                        z-index: 4;
+                    }
+
+                    50% {
+                        left: 90%;
+                        top: 55%;
+                    }
+
+                    100% {
+                        left: 10%;
+                        top: 70%;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__rightColor {
+        background-color: #f6f6f6;
+        width: 63%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__container {
+        max-width: 1800px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__logoAndBurger {
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 11;
+
+        .hint {
+            position: absolute;
+            top: 109%;
+            left: 0px;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.116);
+            color: white;
+            font-family: 'Proxima Nova';
+            font-weight: normal;
+            font-style: italic;
+            font-size: 16px;
+            padding: 3px;
+            border-radius: 10%;
+        }
+
+        .logo {
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover~.hint {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__burger {
+        cursor: pointer;
+
+        .burger {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        &:hover .burger {
+            animation: y 0.4s;
+            animation-iteration-count: 2;
+
+
+            @keyframes y {
+                0% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: translate(0, -20px);
+                }
+
+                100% {
+                    transform: none;
+                }
+
+            }
+        }
+    }
+
+    &__bigText {
+        margin-top: 0px;
+        margin-left: 110px;
+        color: black;
+        line-height: 70px;
+        font-size: 70px;
+        font-weight: 900;
+        font-family: 'Proxima Nova';
+        pointer-events: none;
+    }
+
+    &__smallText {
+        margin-top: 70px;
+        margin-left: 110px;
+        line-height: 34px;
+        font-size: 22px;
+        color: #868686;
+        font-weight: normal;
+        font-family: 'Proxima Nova';
+        pointer-events: none;
+        width: 73.6%;
+
+        span {
+            color: #1b1b1b;
+        }
+    }
+
+    .containerButton {
+        border-radius: 200px;
+        display: table;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        margin-top: 75px;
+        margin-left: 110px;
+
+        .button {
+            background: #1b1b1b;
+            border-radius: 200px;
+            display: inline-block;
+            color: white;
+            cursor: pointer;
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            width: 420px;
+            height: 90px;
+            position: relative;
+            font-size: 22px;
+            line-height: 90px;
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &:hover {
+            .button {
+                animation: bouncing 0.4s cubic-bezier(.1, .25, .1, 1) 0s infinite alternate both;
+            }
+        }
+    }
+
+    .footerBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    &__nextSlide {
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        font-weight: 600;
+        font-family: 'Proxima Nova';
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        span {
+            transition: 0.3s;
+            display: inline-block;
+            color: #c8c8c8;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        img {
+            margin-left: 32px;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            span {
+                transform: rotate(360deg);
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__iconsWeb {
+        display: table;
+        margin-left: auto;
+        position: relative;
+
+        a {
+            display: inline-block;
+            margin-left: 25px;
+            opacity: 0.6;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//АДАПТИВ ЧЕТВЁРТОЙ СЕКЦИИ
+//ШИРИНА
+@media (max-width:1400px) {
+
+    .fourSlider {
+
+        &__rightColor {
+            width: 75%;
+            background-color: #f6f6f6;
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-evenly;
+            align-items: flex-start;
+
+        }
+
+        &__leftColor {
+            width: 25%;
+        }
+
+        &__logoAndBurger {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__bigText {
+            margin-left: 20px;
+            margin-top: 100px;
+            color: black;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Proxima Nova';
+        }
+
+        &__smallText {
+            margin-left: 20px;
+            margin-top: 10px;
+            line-height: 30px;
+            font-size: 22px;
+            color: #868686;
+            font-weight: normal;
+            font-family: 'Proxima Nova';
+            width: 77%;
+
+            br {
+                display: none;
+            }
+        }
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            margin-top: 35px;
+            margin-left: 20px;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                background: #1b1b1b;
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0.2em;
+                width: 320px;
+                height: 57px;
+                position: relative;
+                font-size: 18px;
+                // line-height: 90px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                color: #c8c8c8;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height:1045px) {
+
+    .fourSlider {
+
+        &__logoAndBurger {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                // color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:823px) {
+
+    .fourSlider {
+
+        &__logoAndBurger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .hint {
+                display: none;
+            }
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 75px;
+                height: 61px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__bigText {
+            margin-left: 20px;
+            margin-top: 100px;
+            color: black;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Proxima Nova';
+        }
+
+        &__smallText {
+            margin-left: 20px;
+            margin-top: 0px;
+            line-height: 27px;
+            font-size: 22px;
+            color: #868686;
+            font-weight: normal;
+            font-family: 'Proxima Nova';
+            width: 77%;
+
+            br {
+                display: none;
+            }
+        }
+
+        .footerBlock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                color: #c8c8c8;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+                width: 45px;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+
+    .infoAboutPage {
+        display: none;
+    }
+
+    @keyframes bouncing {
+        0% {
+            bottom: 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        100% {
+            bottom: 0px;
+            box-shadow: none;
+        }
+    }
+
+    .fourSlider {
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: wrap;
+                background: #1b1b1b;
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0em;
+                width: 190px;
+                height: 25px;
+                position: relative;
+                font-size: 16px;
+                // line-height: 90px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &__leftColor {
+            background-color: white;
+            width: 0%;
+            position: relative;
+            flex-shrink: 0;
+            display: none;
+            // z-index: 1;
+        }
+
+        &__rightColor {
+            background-color: #f6f6f6;
+            width: 100%;
+            position: relative;
+            // z-index: 1;
+        }
+
+        &__bigText {
+            font-size: 18px;
+            margin-left: auto;
+            display: table;
+            margin-right: auto;
+            margin-top: 58px;
+            color: black;
+            z-index: 1;
+            position: relative;
+            height: 7px;
+        }
+
+        &__smallText {
+            text-align: center;
+            margin-top: 0px;
+            display: table;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 16px;
+            line-height: 17px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+            position: relative;
+            color: black;
+            margin-top: 0px;
+        }
+
+        &__container {
+            padding: 0 10px;
+        }
+
+        .footerBlock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        &__logoAndBurger {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+        }
+
+        &__nextSlide {
+
+            &:hover {
+                span {
+                    transform: none;
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        .containerSliceRedis.d {
+            display: flex;
+            position: absolute;
+            left: 0px;
+            top: 7%;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.2;
+
+            .sliceRedis {
+                max-width: 100%;
+                max-height: 100%;
+                display: table;
+                margin: 0 auto;
+                position: relative;
+                z-index: 0;
+            }
+
+            .vitamineOne {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+                pointer-events: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 30%;
+                top: 60%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Пищевые волокна';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineTwo {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 70%;
+                top: 47%;
+                transform: scale(0.8);
+
+
+                &::before {
+                    content: 'Вода';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineThree {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 50%;
+                top: 45%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Белки';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineFour {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 50%;
+                top: 60%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Жиры';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+
+            }
+
+            .vitamineFive {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 10%;
+                top: 55%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Углеводы';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -60%;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}
+
+//ШИРИНА
+//ШИРИНА
+
+//ВЫСОТА
+@media (max-height:414px) {
+
+    .infoAboutPage {
+        display: none;
+    }
+
+    @keyframes bouncing {
+        0% {
+            bottom: 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        100% {
+            bottom: 0px;
+            box-shadow: none;
+        }
+    }
+
+    .fourSlider {
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: wrap;
+                background: #1b1b1b;
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0em;
+                width: 190px;
+                height: 25px;
+                position: relative;
+                font-size: 16px;
+                // line-height: 90px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &__leftColor {
+            background-color: white;
+            width: 0%;
+            position: relative;
+            flex-shrink: 0;
+            display: none;
+            // z-index: 1;
+        }
+
+        &__rightColor {
+            background-color: #f6f6f6;
+            width: 100%;
+            position: relative;
+            // z-index: 1;
+        }
+
+        &__bigText {
+            font-size: 18px;
+            margin-left: auto;
+            display: table;
+            margin-right: auto;
+            margin-top: 58px;
+            color: black;
+            z-index: 1;
+            position: relative;
+        }
+
+        &__smallText {
+            text-align: center;
+            display: table;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 16px;
+            line-height: 17px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+            position: relative;
+            color: black;
+            margin-top: 0px;
+        }
+
+        &__container {
+            padding: 0 10px;
+        }
+
+        .footerBlock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        &__logoAndBurger {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+        }
+
+        &__nextSlide {
+
+            &:hover {
+                span {
+                    transform: none;
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        .containerSliceRedis.d {
+            display: flex;
+            position: absolute;
+            left: 0px;
+            top: 7%;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.2;
+
+            .sliceRedis {
+                max-width: 100%;
+                max-height: 100%;
+                display: table;
+                margin: 0 auto;
+                position: relative;
+                z-index: 0;
+            }
+
+            .vitamineOne {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+                pointer-events: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 30%;
+                top: 60%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Пищевые волокна';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineTwo {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 70%;
+                top: 47%;
+                transform: scale(0.8);
+
+
+                &::before {
+                    content: 'Вода';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineThree {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 50%;
+                top: 45%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Белки';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+
+            .vitamineFour {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 50%;
+                top: 60%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Жиры';
+                    position: absolute;
+                    left: 15%;
+                    bottom: -85%;
+                    text-align: center;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+
+            }
+
+            .vitamineFive {
+                z-index: 1;
+                position: absolute;
+                pointer-events: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                left: 10%;
+                top: 55%;
+                transform: scale(0.8);
+
+                &::before {
+                    content: 'Углеводы';
+                    position: absolute;
+                    left: -25%;
+                    bottom: -60%;
+                    color: black;
+                    font-size: 16px;
+                    font-family: 'Proxima Nova';
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height:320px) {
+
+    .fourSlider {
+
+        &__bigText {
+            margin-top: 40px;
+        }
+
+        &__smallText {
+            margin-top: -20px;
+        }
+    }
+}
+
+@media (max-height:1052px) {
+    .fourSlider__bigText {
+        line-height: 0px;
+    }
+
+    .fourSlider__smallText {
+        br {
+            display: none;
+        }
+    }
+
+    .fourSlider .containerButton {
+        margin-top: 50px;
+    }
+}
+
+@media (max-height:906px) {
+    .fourSlider__bigText {
+        line-height: 45px;
+        font-size: 50px;
+    }
+}
+
+@media (max-height:850px) {
+
+    .fourSlider__smallText {
+        margin-top: 30px;
+        line-height: 25px;
+    }
+
+    .fourSlider {
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            margin-top: 35px;
+            margin-left: 110px;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                background: #1b1b1b;
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0.2em;
+                width: 320px;
+                height: 57px;
+                position: relative;
+                font-size: 18px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+@media (max-height:720px) {
+    .fourSlider__bigText {
+        margin-top: 70px;
+    }
+}
+
+@media (max-height:604px) {
+    .fourSlider__bigText {
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width:1400px) {
+    .fourSlider {
+        .containerButton {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 1264px) {
+    .fourSlider__smallText {
+        margin-top: 15px;
+        line-height: 22px;
+    }
+
+    .fourSlider__bigText {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 856px) {
+    .fourSlider {
+        .containerButton {
+            margin-left: 0px;
+        }
+    }
+
+    .fourSlider__bigText {
+        margin-left: 0px;
+    }
+
+    .fourSlider__smallText {
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    .fourSlider .infoAboutPage {
+        right: -40px;
+    }
+}
+
+
+@media (max-width:1400px) and (min-height:630px) {
+
+    .fourSlider {
+
+        &__rightColor {
+            width: 75%;
+            background-color: #f6f6f6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+        }
+
+        .fourSlider__bigText {
+            margin-top: 70px;
+        }
+
+        .fourSlider .containerButton {
+            margin-top: 0px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+
+    .fourSlider__rightColor {
+        background-color: #f6f6f6;
+        width: 100%;
+        position: relative;
+        align-items: center;
+
+    }
+
+    .fourSlider__bigText {
+        font-size: 18px;
+        margin-left: auto;
+        display: table;
+        margin-right: auto;
+        margin-top: 80px;
+        color: black;
+        z-index: 1;
+        position: relative;
+        height: 7px;
+    }
+
+    .fourSlider__smallText {
+        margin-left: auto;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0px;
+    }
+
+    .fourSlider .containerButton {
+        border-radius: 200px;
+        display: table;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+    }
+
+    .fourSlider .containerButton .button {
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-items: center;
+        white-space: wrap;
+        background: #1b1b1b;
+        border-radius: 200px;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 0em;
+        width: 190px;
+        height: 25px;
+        position: relative;
+        font-size: 16px;
+        box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-height:414px) {
+    .fourSlider__rightColor {
+        background-color: #f6f6f6;
+        width: 100%;
+        position: relative;
+        align-items: center;
+
+    }
+
+    .fourSlider__bigText {
+        font-size: 18px;
+        margin-left: auto;
+        display: table;
+        margin-right: auto;
+        margin-top: 80px;
+        color: black;
+        z-index: 1;
+        position: relative;
+        height: 7px;
+    }
+
+    .fourSlider__smallText {
+        margin-left: auto;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0px;
+        line-height: 16px;
+    }
+
+    .fourSlider .containerButton {
+        border-radius: 200px;
+        display: table;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+    }
+
+    .fourSlider .containerButton .button {
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-items: center;
+        white-space: wrap;
+        background: #1b1b1b;
+        border-radius: 200px;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 0em;
+        width: 190px;
+        height: 25px;
+        position: relative;
+        font-size: 16px;
+        box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width:1024px) and (min-width:1024px) {
+    .fourSlider .fourSlider__bigText {
+        margin-top: 140px;
+        line-height: 0px;
+    }
+
+    .fourSlider__smallText {
+        margin-top: 15px;
+        line-height: 28px;
+    }
+
+    .fourSlider .containerButton {
+        margin-top: -0px;
+        margin-bottom: 60px;
+
+    }
+}
+
+@media (max-width:768px) and (min-width:768px) {
+    .fourSlider .fourSlider__bigText {
+        margin-top: 210px;
+        margin-left: 30px;
+    }
+
+    .fourSlider__smallText {
+        margin-top: 15px;
+        line-height: 28px;
+        width: 75%;
+        margin-left: 30px;
+    }
+
+    .fourSlider .containerButton {
+        margin-top: 50px;
+        margin-bottom: 150px;
+        margin-left: 30px;
+    }
+}
+
+//ВЫСОТА
+//ВЫСОТА
+//АДАПТИВ ЧЕТВЁРТОЙ СЕКЦИИ
+//АДАПТИВ ЧЕТВЁРТОЙ СЕКЦИИ

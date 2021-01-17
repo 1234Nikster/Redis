@@ -1,0 +1,287 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.openedMenu {
+    position: fixed;
+    z-index: 100;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-sizing: border-box;
+    background-color: #1b1b1b;
+    background-image: url(../img/gradBlack.jpg);
+    background-size: cover;
+    transform: translate(0px, -100%);
+
+    @keyframes moveToDownMenu {
+        0% {
+            transform: translate(0px, -100%);
+        }
+
+        35% {
+            transform: translate(0px, 0%);
+        }
+
+        50% {
+            transform: translate(0px, -10%);
+        }
+
+        65% {
+            transform: translate(0px, -0%);
+        }
+
+        85% {
+            transform: translate(0px, -4%);
+        }
+
+        100% {
+            transform: translate(0px, 0%);
+        }
+
+    }
+
+    @keyframes moveToUpMenu {
+
+        0% {
+            transform: translate(0px, 0%);
+        }
+
+        100% {
+            transform: translate(0px, -100%);
+        }
+    }
+
+    .openedMenu__crossContainer {
+        position: relative;
+        z-index: 2;
+        display: table;
+        margin-left: auto;
+        margin-right: 60px;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 60px;
+        cursor: pointer;
+        color: white;
+
+        &:hover .openedMenu__cross {
+            animation: y 0.4s;
+            animation-iteration-count: 2;
+
+            @keyframes y {
+                0% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: translate(0px, -10px);
+                }
+
+                100% {
+                    transform: none;
+                }
+            }
+        }
+
+        .openedMenu__cross {
+            display: table;
+
+            span {
+                transform: rotate(45deg);
+                display: block;
+            }
+        }
+    }
+
+    &__itemsAll {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        overflow-y: auto;
+        height: 100%;
+        padding-top: 50px;
+        box-sizing: border-box;
+
+        li {
+            margin: 0 auto;
+            display: table;
+            margin-top: 85px;
+            font-size: 36px;
+            color: white;
+            font-family: 'Proxima Nova';
+            font-weight: bold;
+            list-style: none;
+            position: relative;
+            z-index: 1;
+            padding: 0px;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0%;
+                width: 100%;
+                height: 1.5px;
+                background-color: white;
+                transform: scaleX(0);
+                transition: 0.3s;
+                transform-origin: center;
+            }
+
+            &:hover:before {
+                transform: scaleX(1);
+            }
+        }
+
+        .openedMenu__itemSeven {
+            margin-bottom: 90px;
+        }
+
+        .openedMenu__grad {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            margin-top: 0px;
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__itemOne {}
+
+    &__itemTwo {}
+
+    &__itemThree {}
+
+    &__itemFour {}
+
+    &__itemFive {}
+
+    &__itemSix {}
+}
+
+// .....................АДАПТИВ ОТКРЫТОГО МЕНЮ
+@media (max-width:1400px) {
+    .openedMenu {
+
+        &__itemsAll {
+
+            li {
+                margin: 0 auto;
+                display: table;
+                margin-top: 60px;
+                font-size: 24px;
+                color: white;
+                font-family: 'Proxima Nova';
+                font-weight: bold;
+                list-style: none;
+                position: relative;
+                z-index: 1;
+                padding: 0px;
+            }
+
+            .openedMenu__itemSix {
+                margin-bottom: 60px;
+            }
+        }
+
+        .openedMenu__crossContainer {
+            font-size: 42px;
+        }
+
+    }
+}
+
+@media (max-width:767px) {
+    .openedMenu {
+
+        .openedMenu__crossContainer {
+            margin-left: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 45px;
+            color: white;
+            cursor: pointer;
+        }
+
+        &__itemsAll {
+
+            li {
+                margin: 0 auto;
+                display: table;
+                margin-top: 40px;
+                font-size: 18px;
+                color: white;
+                font-family: 'Proxima Nova';
+                font-weight: bold;
+                list-style: none;
+                position: relative;
+                z-index: 1;
+                padding: 0px;
+            }
+
+            .openedMenu__itemSix {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-height:480px) {
+    .openedMenu {
+
+        .openedMenu__crossContainer {
+            margin-left: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 45px;
+            color: white;
+            cursor: pointer;
+        }
+
+        &__itemsAll {
+
+            li {
+                margin: 0 auto;
+                display: table;
+                margin-top: 40px;
+                font-size: 18px;
+                color: white;
+                font-family: 'Proxima Nova';
+                font-weight: bold;
+                list-style: none;
+                position: relative;
+                z-index: 1;
+                padding: 0px;
+            }
+
+            .openedMenu__itemSix {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+// .....................АДАПТИВ ОТКРЫТОГО МЕНЮ
+// .....................АДАПТИВ ОТКРЫТОГО МЕНЮ

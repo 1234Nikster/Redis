@@ -1,0 +1,2181 @@
+@charset "UTF-8";
+@-webkit-keyframes bouncing {
+  0% {
+    bottom: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    bottom: 18px;
+    -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    bottom: 18px;
+    -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0px;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.fourSlider {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 100vh;
+}
+
+.fourSlider .infoAboutPage {
+  position: absolute;
+  top: 50%;
+  right: -27px;
+  font-size: 18px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  color: #d3d3d3;
+  pointer-events: none;
+}
+
+.fourSlider .containerSliceRedis.d {
+  display: none;
+}
+
+.fourSlider__color {
+  position: relative;
+  border-right: 3px solid white;
+  border-left: 3px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  z-index: 3;
+}
+
+.fourSlider__containerBackground {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fourSlider__leftColor {
+  background-color: white;
+  width: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-top: 185px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.fourSlider__leftColor .containerSliceRedis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fourSlider__leftColor .containerSliceRedis .sliceRedis {
+  max-width: 100%;
+  max-height: 100%;
+  display: table;
+  margin: 0 auto;
+  -webkit-animation: moveRedis 1s linear 0s infinite alternate both, m 8s linear infinite;
+          animation: moveRedis 1s linear 0s infinite alternate both, m 8s linear infinite;
+  position: relative;
+  z-index: 2;
+}
+
+@-webkit-keyframes moveRedis {
+  0% {
+    -webkit-transform: translateY(25px) scale(1);
+            transform: translateY(25px) scale(1);
+    -webkit-filter: drop-shadow(0 50 0px rgba(100, 0, 0, 0.5));
+            filter: drop-shadow(0 50 0px rgba(100, 0, 0, 0.5));
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1.06);
+            transform: translateY(0px) scale(1.06);
+    -webkit-filter: drop-shadow(0px 0px 6px rgba(189, 79, 170, 0.767));
+            filter: drop-shadow(0px 0px 6px rgba(189, 79, 170, 0.767));
+  }
+}
+
+@keyframes moveRedis {
+  0% {
+    -webkit-transform: translateY(25px) scale(1);
+            transform: translateY(25px) scale(1);
+    -webkit-filter: drop-shadow(0 50 0px rgba(100, 0, 0, 0.5));
+            filter: drop-shadow(0 50 0px rgba(100, 0, 0, 0.5));
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1.06);
+            transform: translateY(0px) scale(1.06);
+    -webkit-filter: drop-shadow(0px 0px 6px rgba(189, 79, 170, 0.767));
+            filter: drop-shadow(0px 0px 6px rgba(189, 79, 170, 0.767));
+  }
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineOne {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  pointer-events: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  left: 5%;
+  top: 10%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: toBig 6s 2s infinite linear, vitamineOne 6s 2s infinite ease-in-out;
+          animation: toBig 6s 2s infinite linear, vitamineOne 6s 2s infinite ease-in-out;
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineOne::before {
+  content: 'Пищевые волокна';
+  position: absolute;
+  left: -25%;
+  bottom: -85%;
+  text-align: center;
+  color: #676767;
+  font-size: 16px;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+}
+
+@-webkit-keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes vitamineOne {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 23%;
+  }
+  100% {
+    left: 5%;
+    top: 10%;
+    z-index: 1;
+  }
+}
+
+@keyframes vitamineOne {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 23%;
+  }
+  100% {
+    left: 5%;
+    top: 10%;
+    z-index: 1;
+  }
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineTwo {
+  position: absolute;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  left: 90%;
+  top: 30%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: toBig 9s infinite linear, vitamineTwo 9s infinite ease-in-out;
+          animation: toBig 9s infinite linear, vitamineTwo 9s infinite ease-in-out;
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineTwo::before {
+  content: 'Вода';
+  position: absolute;
+  left: 15%;
+  bottom: -85%;
+  text-align: center;
+  color: #676767;
+  font-size: 16px;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+}
+
+@keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes vitamineTwo {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 0%;
+    top: 40%;
+  }
+  100% {
+    left: 90%;
+    top: 30%;
+    z-index: 1;
+  }
+}
+
+@keyframes vitamineTwo {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 0%;
+    top: 40%;
+  }
+  100% {
+    left: 90%;
+    top: 30%;
+    z-index: 1;
+  }
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineThree {
+  position: absolute;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  left: 90%;
+  top: 70%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: toBig 6s 3.5s infinite linear, vitamineThree 6s 3.5s infinite ease-in-out;
+          animation: toBig 6s 3.5s infinite linear, vitamineThree 6s 3.5s infinite ease-in-out;
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineThree::before {
+  content: 'Белки';
+  position: absolute;
+  left: 15%;
+  bottom: -85%;
+  text-align: center;
+  color: #676767;
+  font-size: 16px;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+}
+
+@keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes vitamineThree {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 1%;
+    top: 15%;
+  }
+  100% {
+    left: 90%;
+    top: 70%;
+    z-index: 1;
+  }
+}
+
+@keyframes vitamineThree {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 1%;
+    top: 15%;
+  }
+  100% {
+    left: 90%;
+    top: 70%;
+    z-index: 1;
+  }
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineFour {
+  position: absolute;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  left: 20%;
+  top: 80%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: toBig 7s 2.5s infinite linear, vitamineFour 7s 2.5s infinite ease-in-out;
+          animation: toBig 7s 2.5s infinite linear, vitamineFour 7s 2.5s infinite ease-in-out;
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineFour::before {
+  content: 'Жиры';
+  position: absolute;
+  left: 15%;
+  bottom: -85%;
+  text-align: center;
+  color: #676767;
+  font-size: 16px;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+}
+
+@keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes vitamineFour {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 20%;
+  }
+  100% {
+    left: 20%;
+    top: 80%;
+    z-index: 1;
+  }
+}
+
+@keyframes vitamineFour {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 20%;
+  }
+  100% {
+    left: 20%;
+    top: 80%;
+    z-index: 1;
+  }
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineFive {
+  position: absolute;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  left: 10%;
+  top: 70%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: toBig 8s infinite linear, vitamineFive 8s infinite ease-in-out;
+          animation: toBig 8s infinite linear, vitamineFive 8s infinite ease-in-out;
+}
+
+.fourSlider__leftColor .containerSliceRedis .vitamineFive::before {
+  content: 'Углеводы';
+  position: absolute;
+  left: -25%;
+  bottom: -60%;
+  color: #676767;
+  font-size: 16px;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+}
+
+@keyframes toBig {
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes vitamineFive {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 55%;
+  }
+  100% {
+    left: 10%;
+    top: 70%;
+    z-index: 1;
+  }
+}
+
+@keyframes vitamineFive {
+  0% {
+    z-index: 4;
+  }
+  50% {
+    left: 90%;
+    top: 55%;
+  }
+  100% {
+    left: 10%;
+    top: 70%;
+    z-index: 1;
+  }
+}
+
+.fourSlider__rightColor {
+  background-color: #f6f6f6;
+  width: 63%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.fourSlider__container {
+  max-width: 1800px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.fourSlider__logoAndBurger {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 11;
+}
+
+.fourSlider__logoAndBurger .hint {
+  position: absolute;
+  top: 109%;
+  left: 0px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.116);
+  color: white;
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+  padding: 3px;
+  border-radius: 10%;
+}
+
+.fourSlider__logoAndBurger .logo {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fourSlider__logoAndBurger .logo:hover ~ .hint {
+  opacity: 1;
+}
+
+.fourSlider__burger {
+  cursor: pointer;
+}
+
+.fourSlider__burger .burger {
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.fourSlider__burger:hover .burger {
+  -webkit-animation: y 0.4s;
+          animation: y 0.4s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+@-webkit-keyframes y {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: translate(0, -20px);
+            transform: translate(0, -20px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes y {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: translate(0, -20px);
+            transform: translate(0, -20px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fourSlider__bigText {
+  margin-top: 0px;
+  margin-left: 110px;
+  color: black;
+  line-height: 70px;
+  font-size: 70px;
+  font-weight: 900;
+  font-family: 'Proxima Nova';
+  pointer-events: none;
+}
+
+.fourSlider__smallText {
+  margin-top: 70px;
+  margin-left: 110px;
+  line-height: 34px;
+  font-size: 22px;
+  color: #868686;
+  font-weight: normal;
+  font-family: 'Proxima Nova';
+  pointer-events: none;
+  width: 73.6%;
+}
+
+.fourSlider__smallText span {
+  color: #1b1b1b;
+}
+
+.fourSlider .containerButton {
+  border-radius: 200px;
+  display: table;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-top: 75px;
+  margin-left: 110px;
+}
+
+.fourSlider .containerButton .button {
+  background: #1b1b1b;
+  border-radius: 200px;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  width: 420px;
+  height: 90px;
+  position: relative;
+  font-size: 22px;
+  line-height: 90px;
+  -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fourSlider .containerButton:hover .button {
+  -webkit-animation: bouncing 0.4s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+          animation: bouncing 0.4s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+}
+
+.fourSlider .footerBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.fourSlider__nextSlide {
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  font-weight: 600;
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fourSlider__nextSlide span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  color: #c8c8c8;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fourSlider__nextSlide img {
+  margin-left: 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fourSlider__nextSlide:hover span {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  font-size: 20px;
+}
+
+.fourSlider__iconsWeb {
+  display: table;
+  margin-left: auto;
+  position: relative;
+}
+
+.fourSlider__iconsWeb a {
+  display: inline-block;
+  margin-left: 25px;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fourSlider__iconsWeb a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1400px) {
+  .fourSlider__rightColor {
+    width: 75%;
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .fourSlider__leftColor {
+    width: 25%;
+  }
+  .fourSlider__logoAndBurger {
+    padding-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__logoAndBurger .logo {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 90px;
+    height: 76px;
+  }
+  .fourSlider__burger {
+    cursor: pointer;
+  }
+  .fourSlider__burger .burger {
+    width: 24px;
+    height: 24px;
+  }
+  .fourSlider__bigText {
+    margin-left: 20px;
+    margin-top: 100px;
+    color: black;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Proxima Nova';
+  }
+  .fourSlider__smallText {
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 22px;
+    color: #868686;
+    font-weight: normal;
+    font-family: 'Proxima Nova';
+    width: 77%;
+  }
+  .fourSlider__smallText br {
+    display: none;
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: nowrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    width: 320px;
+    height: 57px;
+    position: relative;
+    font-size: 18px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+  .fourSlider__nextSlide {
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+    font-weight: 600;
+    font-family: 'Proxima Nova';
+    text-transform: uppercase;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__nextSlide span {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-block;
+    color: #c8c8c8;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .fourSlider__nextSlide img {
+    margin-left: 32px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .fourSlider__nextSlide:hover span {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    font-size: 20px;
+  }
+  .fourSlider__iconsWeb {
+    display: table;
+    margin-left: auto;
+  }
+  .fourSlider__iconsWeb a {
+    display: inline-block;
+    margin-left: 25px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .fourSlider__iconsWeb a:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-height: 1045px) {
+  .fourSlider__logoAndBurger {
+    padding-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__logoAndBurger .logo {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 90px;
+    height: 76px;
+  }
+  .fourSlider__burger {
+    cursor: pointer;
+  }
+  .fourSlider__burger .burger {
+    width: 24px;
+    height: 24px;
+  }
+  .fourSlider__nextSlide {
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+    font-weight: 600;
+    font-family: 'Proxima Nova';
+    text-transform: uppercase;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__nextSlide span {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .fourSlider__nextSlide img {
+    margin-left: 32px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .fourSlider__nextSlide:hover span {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    font-size: 20px;
+  }
+  .fourSlider__iconsWeb {
+    display: table;
+    margin-left: auto;
+  }
+  .fourSlider__iconsWeb a {
+    display: inline-block;
+    margin-left: 25px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .fourSlider__iconsWeb a:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 823px) {
+  .fourSlider__logoAndBurger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__logoAndBurger .hint {
+    display: none;
+  }
+  .fourSlider__logoAndBurger .logo {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 75px;
+    height: 61px;
+  }
+  .fourSlider__burger {
+    cursor: pointer;
+  }
+  .fourSlider__burger .burger {
+    width: 20px;
+    height: 20px;
+  }
+  .fourSlider__bigText {
+    margin-left: 20px;
+    margin-top: 100px;
+    color: black;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Proxima Nova';
+  }
+  .fourSlider__smallText {
+    margin-left: 20px;
+    margin-top: 0px;
+    line-height: 27px;
+    font-size: 22px;
+    color: #868686;
+    font-weight: normal;
+    font-family: 'Proxima Nova';
+    width: 77%;
+  }
+  .fourSlider__smallText br {
+    display: none;
+  }
+  .fourSlider .footerBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .fourSlider__nextSlide {
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+    font-weight: 600;
+    font-family: 'Proxima Nova';
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__nextSlide span {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-block;
+    color: #c8c8c8;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .fourSlider__nextSlide img {
+    margin-left: 32px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 45px;
+  }
+  .fourSlider__nextSlide:hover span {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    font-size: 20px;
+  }
+  .fourSlider__iconsWeb {
+    display: table;
+    margin-left: auto;
+  }
+  .fourSlider__iconsWeb a {
+    display: inline-block;
+    margin-left: 25px;
+    opacity: 0.6;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .fourSlider__iconsWeb a:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .infoAboutPage {
+    display: none;
+  }
+  @-webkit-keyframes bouncing {
+    0% {
+      bottom: 0;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      bottom: 0px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+  }
+  @keyframes bouncing {
+    0% {
+      bottom: 0;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      bottom: 0px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: wrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0em;
+    width: 190px;
+    height: 25px;
+    position: relative;
+    font-size: 16px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+  .fourSlider__leftColor {
+    background-color: white;
+    width: 0%;
+    position: relative;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: none;
+  }
+  .fourSlider__rightColor {
+    background-color: #f6f6f6;
+    width: 100%;
+    position: relative;
+  }
+  .fourSlider__bigText {
+    font-size: 18px;
+    margin-left: auto;
+    display: table;
+    margin-right: auto;
+    margin-top: 58px;
+    color: black;
+    z-index: 1;
+    position: relative;
+    height: 7px;
+  }
+  .fourSlider__smallText {
+    text-align: center;
+    margin-top: 0px;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 16px;
+    line-height: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+    color: black;
+    margin-top: 0px;
+  }
+  .fourSlider__container {
+    padding: 0 10px;
+  }
+  .fourSlider .footerBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .fourSlider__logoAndBurger {
+    padding-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  .fourSlider__nextSlide:hover span {
+    -webkit-transform: none;
+            transform: none;
+    font-size: 16px;
+  }
+  .fourSlider .containerSliceRedis.d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 7%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+  }
+  .fourSlider .containerSliceRedis.d .sliceRedis {
+    max-width: 100%;
+    max-height: 100%;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineOne {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    pointer-events: none;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 30%;
+    top: 60%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineOne::before {
+    content: 'Пищевые волокна';
+    position: absolute;
+    left: -25%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineTwo {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 70%;
+    top: 47%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineTwo::before {
+    content: 'Вода';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineThree {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineThree::before {
+    content: 'Белки';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFour {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFour::before {
+    content: 'Жиры';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFive {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 10%;
+    top: 55%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFive::before {
+    content: 'Углеводы';
+    position: absolute;
+    left: -25%;
+    bottom: -60%;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+}
+
+@media (max-height: 414px) {
+  .infoAboutPage {
+    display: none;
+  }
+  @-webkit-keyframes bouncing {
+    0% {
+      bottom: 0;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      bottom: 0px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+  }
+  @keyframes bouncing {
+    0% {
+      bottom: 0;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      bottom: 0px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: wrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0em;
+    width: 190px;
+    height: 25px;
+    position: relative;
+    font-size: 16px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+  .fourSlider__leftColor {
+    background-color: white;
+    width: 0%;
+    position: relative;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: none;
+  }
+  .fourSlider__rightColor {
+    background-color: #f6f6f6;
+    width: 100%;
+    position: relative;
+  }
+  .fourSlider__bigText {
+    font-size: 18px;
+    margin-left: auto;
+    display: table;
+    margin-right: auto;
+    margin-top: 58px;
+    color: black;
+    z-index: 1;
+    position: relative;
+  }
+  .fourSlider__smallText {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 16px;
+    line-height: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+    color: black;
+    margin-top: 0px;
+  }
+  .fourSlider__container {
+    padding: 0 10px;
+  }
+  .fourSlider .footerBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .fourSlider__logoAndBurger {
+    padding-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  .fourSlider__nextSlide:hover span {
+    -webkit-transform: none;
+            transform: none;
+    font-size: 16px;
+  }
+  .fourSlider .containerSliceRedis.d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 7%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+  }
+  .fourSlider .containerSliceRedis.d .sliceRedis {
+    max-width: 100%;
+    max-height: 100%;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineOne {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    pointer-events: none;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 30%;
+    top: 60%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineOne::before {
+    content: 'Пищевые волокна';
+    position: absolute;
+    left: -25%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineTwo {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 70%;
+    top: 47%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineTwo::before {
+    content: 'Вода';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineThree {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineThree::before {
+    content: 'Белки';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFour {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFour::before {
+    content: 'Жиры';
+    position: absolute;
+    left: 15%;
+    bottom: -85%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFive {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+    left: 10%;
+    top: 55%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .fourSlider .containerSliceRedis.d .vitamineFive::before {
+    content: 'Углеводы';
+    position: absolute;
+    left: -25%;
+    bottom: -60%;
+    color: black;
+    font-size: 16px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+  }
+}
+
+@media (max-height: 320px) {
+  .fourSlider__bigText {
+    margin-top: 40px;
+  }
+  .fourSlider__smallText {
+    margin-top: -20px;
+  }
+}
+
+@media (max-height: 1052px) {
+  .fourSlider__bigText {
+    line-height: 0px;
+  }
+  .fourSlider__smallText br {
+    display: none;
+  }
+  .fourSlider .containerButton {
+    margin-top: 50px;
+  }
+}
+
+@media (max-height: 906px) {
+  .fourSlider__bigText {
+    line-height: 45px;
+    font-size: 50px;
+  }
+}
+
+@media (max-height: 850px) {
+  .fourSlider__smallText {
+    margin-top: 30px;
+    line-height: 25px;
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 110px;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: nowrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    width: 320px;
+    height: 57px;
+    position: relative;
+    font-size: 18px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-height: 720px) {
+  .fourSlider__bigText {
+    margin-top: 70px;
+  }
+}
+
+@media (max-height: 604px) {
+  .fourSlider__bigText {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .fourSlider .containerButton {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1264px) {
+  .fourSlider__smallText {
+    margin-top: 15px;
+    line-height: 22px;
+  }
+  .fourSlider__bigText {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 856px) {
+  .fourSlider .containerButton {
+    margin-left: 0px;
+  }
+  .fourSlider__bigText {
+    margin-left: 0px;
+  }
+  .fourSlider__smallText {
+    margin-left: 0px;
+    width: 90%;
+  }
+  .fourSlider .infoAboutPage {
+    right: -40px;
+  }
+}
+
+@media (max-width: 1400px) and (min-height: 630px) {
+  .fourSlider__rightColor {
+    width: 75%;
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .fourSlider .fourSlider__bigText {
+    margin-top: 70px;
+  }
+  .fourSlider .fourSlider .containerButton {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fourSlider__rightColor {
+    background-color: #f6f6f6;
+    width: 100%;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__bigText {
+    font-size: 18px;
+    margin-left: auto;
+    display: table;
+    margin-right: auto;
+    margin-top: 80px;
+    color: black;
+    z-index: 1;
+    position: relative;
+    height: 7px;
+  }
+  .fourSlider__smallText {
+    margin-left: auto;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: wrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0em;
+    width: 190px;
+    height: 25px;
+    position: relative;
+    font-size: 16px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-height: 414px) {
+  .fourSlider__rightColor {
+    background-color: #f6f6f6;
+    width: 100%;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fourSlider__bigText {
+    font-size: 18px;
+    margin-left: auto;
+    display: table;
+    margin-right: auto;
+    margin-top: 80px;
+    color: black;
+    z-index: 1;
+    position: relative;
+    height: 7px;
+  }
+  .fourSlider__smallText {
+    margin-left: auto;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    line-height: 16px;
+  }
+  .fourSlider .containerButton {
+    border-radius: 200px;
+    display: table;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+  }
+  .fourSlider .containerButton .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    white-space: wrap;
+    background: #1b1b1b;
+    border-radius: 200px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0em;
+    width: 190px;
+    height: 25px;
+    position: relative;
+    font-size: 16px;
+    -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .fourSlider .fourSlider__bigText {
+    margin-top: 140px;
+    line-height: 0px;
+  }
+  .fourSlider__smallText {
+    margin-top: 15px;
+    line-height: 28px;
+  }
+  .fourSlider .containerButton {
+    margin-top: -0px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 768px) {
+  .fourSlider .fourSlider__bigText {
+    margin-top: 210px;
+    margin-left: 30px;
+  }
+  .fourSlider__smallText {
+    margin-top: 15px;
+    line-height: 28px;
+    width: 75%;
+    margin-left: 30px;
+  }
+  .fourSlider .containerButton {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    margin-left: 30px;
+  }
+}
+/*# sourceMappingURL=style-section-four.css.map */

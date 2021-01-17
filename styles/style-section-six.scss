@@ -1,0 +1,1059 @@
+.sixSlider {
+
+    width: 100%;
+    flex-shrink: 0;
+    height: 100vh;
+
+    .infoAboutPage {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        font-size: 18px;
+        transform: rotate(-90deg);
+        font-family: 'Proxima Nova';
+        font-weight: normal;
+        color: #d3d3d3;
+        pointer-events: none;
+    }
+
+    &__color {
+        position: relative;
+        border-right: 3px solid white;
+        border-left: 3px solid white;
+        box-sizing: border-box;
+        height: 100%;
+        z-index: 3;
+        background-color: #ffffff;
+    }
+
+    &__container {
+        max-width: 1800px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__burger {
+        cursor: pointer;
+
+        .burger {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        &:hover .burger {
+            animation: y 0.4s;
+            animation-iteration-count: 2;
+
+
+            @keyframes y {
+                0% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: translate(0, -20px);
+                }
+
+                100% {
+                    transform: none;
+                }
+
+            }
+        }
+    }
+
+    &__logoAndBurger {
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 11;
+
+        .hint {
+            position: absolute;
+            top: 109%;
+            left: 0px;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.116);
+            color: white;
+            font-family: 'Proxima Nova';
+            font-weight: normal;
+            font-style: italic;
+            font-size: 16px;
+            padding: 3px;
+            border-radius: 10%;
+        }
+
+        .logo {
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover~.hint {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__middleContainer {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 95px;
+        width: 100%;
+    }
+
+    &__texts {
+        margin-right: 190px;
+    }
+
+    &__boldText {
+        font-size: 70px;
+        line-height: 70px;
+        color: #1b1b1b;
+        font-family: 'Proxima Nova';
+        font-weight: 900;
+    }
+
+    &__littleText {
+        font-size: 22px;
+        font-family: 'Proxima Nova';
+        color: #cccccc;
+        margin-top: 66px;
+    }
+
+    &__sectionOfDish {
+        margin-top: 35px;
+    }
+
+    &__topLine {
+        display: flex;
+    }
+
+    &__typeDish {
+        font-size: 22px;
+        font-family: 'Proxima Nova';
+        padding: 5px 15px;
+        color: #1b1b1b;
+        background-color: #e9e9e9;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #dddada;
+        }
+    }
+
+    &__typeDish.active {
+        background-color: #a09e9e;
+        color: white;
+    }
+
+    &__bottomLine {
+        margin-top: 25px;
+        display: flex;
+    }
+
+    &__image {
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .margLeft {
+        margin-left: 10px;
+    }
+
+    .containerButton {
+        border-radius: 200px;
+        display: table;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        margin-top: 95px;
+        margin-left: 0px;
+
+        .button {
+            background: rgb(149, 147, 147);
+            border-radius: 200px;
+            display: inline-block;
+            color: white;
+            cursor: pointer;
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            width: 420px;
+            height: 90px;
+            position: relative;
+            font-size: 22px;
+            line-height: 90px;
+            box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            transition: 0.3s
+        }
+
+        .buttonSix.active {
+            background: #1b1b1b;
+        }
+
+        &:hover {
+            .button {
+                animation: bouncing 0.4s cubic-bezier(.1, .25, .1, 1) 0s infinite alternate both;
+            }
+        }
+    }
+
+
+
+    .footerBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 40px;
+        margin-top: 50px;
+    }
+
+    &__nextSlide {
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        font-weight: 600;
+        font-family: 'Proxima Nova';
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        span {
+            transition: 0.3s;
+            display: inline-block;
+            color: #c8c8c8;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        img {
+            margin-left: 32px;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            span {
+                transform: rotate(360deg);
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__iconsWeb {
+        display: table;
+        margin-left: auto;
+        position: relative;
+
+        a {
+            display: inline-block;
+            margin-left: 25px;
+            opacity: 0.6;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//АДАПТИВ ШЕСТОЙ СЕКЦИИ
+//ШИРИНА
+@media (max-width:1400px) {
+    .sixSlider {
+
+        &__logoAndBurger {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .sixSlider .containerButton {
+        border-radius: 200px;
+        display: table;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .sixSlider .containerButton .button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        white-space: nowrap;
+        border-radius: 200px;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 0.2em;
+        width: 320px;
+        height: 57px;
+        position: relative;
+        font-size: 18px;
+        -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-height:1045px) {
+    .sixSlider {
+
+        &__logoAndBurger {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                // color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1372px) {
+    .sixSlider__middleContainer {
+        align-items: center;
+        display: flex;
+        margin-top: 25px;
+    }
+}
+
+
+@media (max-width:1280px) {
+
+    .sixSlider {
+
+        &__logoAndBurger {
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            // margin-top: 35px;
+            // margin-left: 20px;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                background: rgb(149, 147, 147);
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0.2em;
+                width: 320px;
+                height: 57px;
+                position: relative;
+                font-size: 18px;
+                // line-height: 90px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .sixSlider__texts {
+            margin-right: 20px;
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                color: #c8c8c8;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1132px) {
+
+    .sixSlider {
+        .sixSlider__texts {
+            width: 100%;
+            margin-right: 0px;
+            text-align: center;
+        }
+    }
+
+    .sixSlider__middleContainer {
+        width: 100%;
+    }
+
+    .sixSlider__boldText {
+        font-size: 50px;
+        line-height: 50px;
+        color: #1b1b1b;
+    }
+
+    .sixSlider__littleText {
+        display: table;
+        margin: 75px auto 0px auto;
+        font-weight: 600;
+    }
+
+    .sixSlider__sectionOfDish {
+        display: table;
+        margin: 75px auto 0px auto;
+    }
+
+    .sixSlider .containerButton {
+        display: table;
+        margin: 75px auto 0px auto;
+    }
+
+    .sixSlider__middleContainer {
+        position: relative;
+        display: flex;
+        margin-top: 25px;
+    }
+
+    .sixSlider .sixSlider__texts {
+        position: relative;
+        z-index: 1;
+    }
+
+    .sixSlider__image {
+        position: absolute;
+        height: auto;
+
+        img {
+            opacity: 0.35;
+        }
+    }
+
+    .sixSlider__littleText {
+        color: black;
+    }
+}
+
+
+@media (max-width:823px) {
+
+    .sixSlider {
+
+        &__logoAndBurger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .hint {
+                display: none;
+            }
+
+            .logo {
+                cursor: pointer;
+                transition: 0.3s;
+                width: 75px;
+                height: 61px;
+            }
+        }
+
+        &__burger {
+            cursor: pointer;
+
+            .burger {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .footerBlock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__nextSlide {
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-family: 'Proxima Nova';
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            span {
+                transition: 0.3s;
+                display: inline-block;
+                color: #c8c8c8;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            img {
+                margin-left: 32px;
+                transition: 0.3s;
+                width: 45px;
+            }
+
+            &:hover {
+                span {
+                    transform: rotate(360deg);
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__iconsWeb {
+            display: table;
+            margin-left: auto;
+
+            a {
+                display: inline-block;
+                margin-left: 25px;
+                opacity: 0.6;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-height:833px) {
+    .sixSlider .containerButton .button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        white-space: nowrap;
+        border-radius: 200px;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 0.2em;
+        width: 320px;
+        height: 57px;
+        position: relative;
+        font-size: 18px;
+        -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width:767px) {
+
+    .infoAboutPage {
+        display: none;
+    }
+
+    @keyframes bouncing {
+        0% {
+            bottom: 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        100% {
+            bottom: 0px;
+            box-shadow: none;
+        }
+    }
+
+    .sixSlider {
+
+        .containerButton {
+            border-radius: 200px;
+            display: table;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: wrap;
+                background: rgb(149, 147, 147);
+                border-radius: 200px;
+                color: white;
+                cursor: pointer;
+                font-weight: normal;
+                letter-spacing: 0em;
+                width: 190px;
+                height: 25px;
+                position: relative;
+                font-size: 16px;
+                // line-height: 90px;
+                box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &__container {
+            padding: 0 10px;
+        }
+
+
+        .footerBlock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        &__logoAndBurger {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+        }
+
+        &__nextSlide {
+
+            &:hover {
+                span {
+                    transform: none;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+@media (max-width:767px) {
+
+    .sixSlider__boldText {
+        font-size: 18px;
+        line-height: 0px;
+        color: #1b1b1b;
+    }
+
+    .sixSlider__littleText {
+        font-size: 16px;
+    }
+
+    .sixSlider__typeDish {
+        font-size: 16px;
+        font-family: 'Proxima Nova';
+        padding: 5px 10px;
+    }
+}
+
+//ШИРИНА
+//ШИРИНА
+
+//ВЫСОТА
+
+@media (max-height:1032px) {
+    .sixSlider__middleContainer {
+        margin-top: 20px;
+    }
+}
+
+@media (max-height:833px) {
+    .sixSlider .containerButton {
+        margin-top: 40px;
+    }
+
+    .sixSlider__littleText {
+        margin-top: 30px;
+    }
+}
+
+@media (max-height:805px) and (min-width:768px) {
+    .sixSlider__boldText {
+        font-size: 50px;
+        line-height: 0px;
+        font-weight: 900;
+        white-space: nowrap;
+    }
+
+    .sixSlider__texts {
+        margin-right: 400px;
+    }
+
+    .sixSlider__middleContainer {
+        align-items: center;
+    }
+
+    .sixSlider .footerBlock {
+        margin-top: 0px;
+    }
+
+    .sixSlider__middleContainer {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width:1144px) and (max-height:793px) {
+    .sixSlider .sixSlider__texts {
+        margin-right: 220px;
+    }
+}
+
+
+@media (max-height:960px) {
+    .sixSlider .sixSlider__texts {
+        margin-right: 30px;
+    }
+
+    .sixSlider {
+        .sixSlider__image {
+            height: 60vh;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width:1400px) {
+    .sixSlider__boldText {
+        font-size: 50px;
+    }
+}
+
+@media (max-width:1132px) {
+    .sixSlider {
+        .sixSlider__image {
+            height: auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .sixSlider__boldText {
+        font-size: 18px;
+        line-height: 0px;
+        color: #1b1b1b;
+    }
+
+    .sixSlider__littleText {
+        font-size: 16px;
+    }
+
+    .sixSlider__typeDish {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-height:480px) {
+    .sixSlider__container {
+        padding: 0 10px;
+    }
+    .sixSlider__logoAndBurger {
+        padding-top: 10px;
+    }
+
+    .sixSlider__middleContainer {
+        margin-top: 0px;
+    }
+
+    .sixSlider__sectionOfDish {
+        display: table;
+        margin: 25px auto 0px auto;
+    }
+
+    .sixSlider__boldText {
+        font-size: 18px;
+        line-height: 0px;
+        color: #1b1b1b;
+    }
+
+    .sixSlider__littleText {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .sixSlider__typeDish {
+        font-size: 16px;
+        font-family: 'Proxima Nova';
+        padding: 5px 10px;
+    }
+
+    .sixSlider .containerButton {
+        margin-top: 20px;
+    }
+
+    .sixSlider .footerBlock {
+        margin-top: 0px;
+    }
+
+    .sixSlider .containerButton .button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        white-space: wrap;
+        background: #959393;
+        border-radius: 200px;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        letter-spacing: 0em;
+        width: 190px;
+        height: 25px;
+        position: relative;
+        font-size: 16px;
+        -webkit-box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-height:320px) {
+    .sixSlider__bottomLine {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width:1132px) {
+
+    .sixSlider {
+        .sixSlider__texts {
+            width: 100%;
+            margin-right: 0px;
+            text-align: center;
+        }
+    }
+}
+
+//ВЫСОТА
+//ВЫСОТА
+//АДАПТИВ ШЕСТОЙ СЕКЦИИ
+//АДАПТИВ ШЕСТОЙ СЕКЦИИ
